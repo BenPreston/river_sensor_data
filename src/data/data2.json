@@ -1,0 +1,32 @@
+// [
+//   {
+//     "id": "c19706c4-707b-4d42-9654-93248fd8d34c",
+//     "direction": "MO",
+//     "transmittedAt": { "unix": 1560693625, "iso": "2019-06-16T14:00:25.114Z" },
+//     "latitude": "51.205424",
+//     "longitude": "-1.369337",
+//     "sensorId": "821ef78d-4b53-4bf4-83d5-686ad81deb48",
+//     "payload": "eyJ0ZW1wZXJhdHVyZSI6eyJ2YWx1ZSI6MywidW5pdCI6IkMifSwiaGVpZ2h0Ijp7InZhbHVlIjoiNC4xMyIsInVuaXQiOiJNIn0sInNwZWVkIjp7InZhbHVlIjoiMy4yNiIsInVuaXQiOiJNL3MifSwiYmF0dGVyeSI6eyJ2YWx1ZSI6OTgsInVuaXQiOiIlIn0sImFsYXJtIjpmYWxzZSwic3RhdGUiOiJSaXNpbmciLCJveHlnZW4iOnsidmFsdWUiOjUwLCJ1bml0IjoibWcvTCJ9fQ==",
+//     "bytes": 288
+//   },
+//   {
+//     "id": "9e17c466-b516-45ac-81c0-3b2ae2d9e1ca",
+//     "direction": "MO",
+//     "transmittedAt": { "unix": 1573844453, "iso": "2019-11-15T19:00:52.510Z" },
+//     "latitude": "51.736449",
+//     "longitude": "-4.049007",
+//     "sensorId": "ea7e3611-a61f-4e6d-996d-063a2e890195",
+//     "payload": "eyJ0ZW1wZXJhdHVyZSI6eyJ2YWx1ZSI6MSwidW5pdCI6IkMifSwiaGVpZ2h0Ijp7InZhbHVlIjoiNC4yNyIsInVuaXQiOiJNIn0sInNwZWVkIjp7InZhbHVlIjoiMC4zOSIsInVuaXQiOiJNL3MifSwiYmF0dGVyeSI6eyJ2YWx1ZSI6NjEsInVuaXQiOiIlIn0sImFsYXJtIjpmYWxzZSwic3RhdGUiOiJSaXNpbmciLCJveHlnZW4iOnsidmFsdWUiOjQ5LCJ1bml0IjoibWcvTCJ9fQ==",
+//     "bytes": 288
+//   },
+//   {
+//     "id": "fc11dcf9-6bcb-45ad-98a2-38c895d4f241",
+//     "direction": "MO",
+//     "transmittedAt": { "unix": 1599948268, "iso": "2020-09-12T22:04:28.336Z" },
+//     "latitude": "51.513289",
+//     "longitude": "-0.121575",
+//     "sensorId": "c129d49e-a858-40d2-9945-0bb71b50971b",
+//     "payload": "eyJ0ZW1wZXJhdHVyZSI6eyJ2YWx1ZSI6MCwidW5pdCI6IkMifSwiaGVpZ2h0Ijp7InZhbHVlIjoiMy4xNyIsInVuaXQiOiJNIn0sInNwZWVkIjp7InZhbHVlIjoiMTQuMDUiLCJ1bml0IjoiTS9zIn0sImJhdHRlcnkiOnsidmFsdWUiOjEsInVuaXQiOiIlIn0sImFsYXJtIjpmYWxzZSwic3RhdGUiOiJGYWxsaW5nIiwib3h5Z2VuIjp7InZhbHVlIjo1LCJ1bml0IjoibWcvTCJ9fQ==",
+//     "bytes": 288
+//   }
+// ]
