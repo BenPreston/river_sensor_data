@@ -1,71 +1,33 @@
-# Getting Started with Create React App
+# Understanding the project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was designed to help utilise some water sensor data that was provided in JSON format [data.json](https://github.com/BenPreston/river_sensor_data/blob/main/src/data/data.json)
 
-## Available Scripts
+The key requirements of the project were as follows (provided with an explanation of how they were met for clarity)
 
-In the project directory, you can run:
+**Consume JSON sample data and decode sensor data** - the project used the JSON data, as an example of decoding the date format has been changed to show day, month, year and time. However this is still sortable by date
+**Present the data in tabular form; with appropriate**: 
+**Formatting/styling for data types** - The date has been formated, as it was not clear what data was important to the client. For now all has been left, however there is a checkbox selector at the top of the page to remove any unrequired fields.
+**Arrangement and presentation** - a selector has been created so individual row data fields can be selected. These are then reviewed in graphs and a map below
+**Search/filtering capabilities** - search at a column level to filter in key values across every column is provided. The bytes column has been left free purely to show the client of the possiblity to remove this if required.
+**UI performance for data size** - ten pieces of data are presented to the user at once, however they have the option to increase this to 25, 50, 100, 250, 500 and 1000
+**Cross browser and screen size considerations** - for mobile a separate screen has been created that presents the data in box form. However a decision to remain at full length has been taken for easy choice of rows, as all columns are hideable
+**Visualise the “sensor” data** - The data is presented both in map and graph format. By selecting specific values the client can see the relevant lat and long on a map. A graph plotting long vs lat has been  created. This has been done using a library so if the client would prefer and other type of data mapping, or graph shape this can easily be changed.
+**Impress us by visualising some/all of the sensor data** - this has been done through a mapping function and graph which can be changed to any other standard form e.g line, bubble, pie etc depending on the clients needs.
+
+### `View this live at`
+https://watertabledata-c16bb.web.app/
 
 ### `npm start`
 
-Runs the app in the development mode.\
+To run this project locally please clone and run npm start. 
+
+You made need to add your own Google Authentication once you have this it runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `Style Guide`
 
-### `npm test`
+This has been written with esLint and prettier you can see both sheets for style guide
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Further Questions`
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# river_sensor_data
+Please contact the author [Ben Preston](hi@benpreston.net)

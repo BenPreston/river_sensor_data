@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import Map from './Map';
 
 // Modules
 import {
@@ -9,7 +10,7 @@ import {
   usePagination,
   useRowSelect,
 } from 'react-table';
-import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import { Table } from 'react-super-responsive-table';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 import {
   TiArrowSortedDown,
@@ -195,7 +196,9 @@ export default function DataTable() {
           {'>>'}
         </button>
       </div>
+      <Map data={selectedFlatRows} />
       <Charts data={selectedFlatRows} />
+
     </>
   );
 }
