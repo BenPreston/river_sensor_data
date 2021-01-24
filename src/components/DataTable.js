@@ -22,6 +22,7 @@ import raw_data from '../data/dataEditor';
 import { COLUMNS } from './columns';
 import Checkbox from './Checkbox';
 import './table.css';
+import Charts from './Charts';
 
 export default function DataTable() {
   const columns = useMemo(() => COLUMNS, []);
@@ -80,18 +81,25 @@ export default function DataTable() {
 
   return (
     <>
+      <h2>Data Table</h2>
+      <p>
+        You can select or deselect every data field, search through the table
+        for specific values, use the arrow keys to filter up or down and change
+        the pagination and number of data rows on the bar at the bottom of the
+        page
+      </p>
       <div className="boxes">
-            <div className='boxes_inputs'>
-              <Checkbox {...getToggleHideAllColumnsProps()} /> Toggle All
-            </div>
-            {allColumns.map((column) => (
-              <div key={column.id} className={'boxes_inputs' + ' ' + column.id}>
-                <label>
-                  <input type="checkbox" {...column.getToggleHiddenProps()} />
-                  {column.Header}
-                </label>
-              </div>
-            ))}
+        <div className="boxes_inputs">
+          <Checkbox {...getToggleHideAllColumnsProps()} /> Toggle All
+        </div>
+        {allColumns.map((column) => (
+          <div key={column.id} className={'boxes_inputs' + ' ' + column.id}>
+            <label>
+              <input type="checkbox" {...column.getToggleHiddenProps()} />
+              {column.Header}
+            </label>
+          </div>
+        ))}
       </div>
       <Table {...getTableProps()}>
         <thead>
@@ -187,18 +195,7 @@ export default function DataTable() {
           {'>>'}
         </button>
       </div>
-      {/* <pre>
-        <code>
-          {console.log(selectedFlatRows)}
-          {JSON.stringify(
-            {
-              selectedFlatRows: selectedFlatRows.map((row) => row.original),
-            },
-            null,
-            2
-          )})
-        </code>
-      </pre> */}
+      <Charts data={selectedFlatRows} />
     </>
   );
 }
