@@ -1,4 +1,6 @@
 import { useMemo } from 'react';
+
+// Modules
 import {
   useTable,
   useSortBy,
@@ -7,16 +9,18 @@ import {
   usePagination,
   useRowSelect,
 } from 'react-table';
-import raw_data from '../data/dataEditor';
-import { COLUMNS } from './columns';
-import Checkbox from './Checkbox';
-
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 import {
   TiArrowSortedDown,
   TiArrowSortedUp,
   TiArrowUnsorted,
 } from 'react-icons/ti';
 
+// Local
+import raw_data from '../data/dataEditor';
+import { COLUMNS } from './columns';
+import Checkbox from './Checkbox';
 import './table.css';
 
 export default function DataTable() {
@@ -76,18 +80,20 @@ export default function DataTable() {
 
   return (
     <>
-      <div>
-        <Checkbox {...getToggleHideAllColumnsProps()} /> Toggle All
+      <div className="boxes">
+            <div className='boxes_inputs'>
+              <Checkbox {...getToggleHideAllColumnsProps()} /> Toggle All
+            </div>
+            {allColumns.map((column) => (
+              <div key={column.id} className={'boxes_inputs' + ' ' + column.id}>
+                <label>
+                  <input type="checkbox" {...column.getToggleHiddenProps()} />
+                  {column.Header}
+                </label>
+              </div>
+            ))}
       </div>
-      {allColumns.map((column) => (
-        <div key={column.id}>
-          <label>
-            <input type="checkbox" {...column.getToggleHiddenProps()} />
-            {column.Header}
-          </label>
-        </div>
-      ))}
-      <table {...getTableProps()}>
+      <Table {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
@@ -137,19 +143,7 @@ export default function DataTable() {
             </tr>
           ))}
         </tfoot>
-      </table>
-      <pre>
-        <code>
-          {JSON.stringify(
-            {
-              selectedFlatRows: selectedFlatRows.map((row) => row.original),
-            },
-            null,
-            2
-          )}
-        </code>
-      </pre>
-
+      </Table>
       <div>
         <span>
           Page{' '}
@@ -193,6 +187,18 @@ export default function DataTable() {
           {'>>'}
         </button>
       </div>
+      {/* <pre>
+        <code>
+          {console.log(selectedFlatRows)}
+          {JSON.stringify(
+            {
+              selectedFlatRows: selectedFlatRows.map((row) => row.original),
+            },
+            null,
+            2
+          )})
+        </code>
+      </pre> */}
     </>
   );
 }
